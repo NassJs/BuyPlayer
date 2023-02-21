@@ -1,12 +1,12 @@
 import './App.css';
-import { Button } from './component/Button/Button';
-
+import { Player } from './container/PlayerInfo.jsx/Player';
 function App() {
+
+
   return (
-    <div className="App">
-    <h1 className=' text-red-100'> Hello word</h1>
-      <Button> Click </Button>
-    </div>
+  <div className="App">
+    <Player />
+  </div>
   );
 }
 
