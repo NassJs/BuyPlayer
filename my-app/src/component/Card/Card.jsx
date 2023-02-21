@@ -2,12 +2,15 @@ import React from 'react';
 
 export const Card= ({children}) => {
     return (
-    <div className=" flex flex-col  justify-center h-64 w-96 shadow-2xl items-stretch"> {children}</div>
+    <div className=" flex flex-col flex-wrap justify-center h-64 px-8 
+    w-96 shadow-2xl items-stretch border-4 border-orange-50"> 
+    {children}
+    </div>
     )
 }
 export const CardTitle = ({children}) => {
     return (
-        <div className="text-violet-700">{children}</div>
+        <div className="text-violet-700 text-xl ">{children}</div>
     )
 }
 export const CardHeader = ({children}) => {

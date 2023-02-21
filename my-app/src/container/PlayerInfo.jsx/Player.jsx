@@ -1,13 +1,14 @@
 import React from "react";
 import { Data } from "../../data/Data";
-import {Card, CardFooter, CardHeader, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card'
-
+import {Card, CardFooter, CardHeader, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
+import { ButtonMoney } from "../Money/ButtonMoney";
 export const Player = () => {
     
-    console.log(Data);
     return (
-        <div className="flex flex-row">
-            {Data.map((player ) => (
+        <>
+        <ButtonMoney />
+        <div className="flex flex-row justify-center flex-wrap pt-20">
+            {Data.map((player) => (
               <Card> 
                 <CardHeader>
                 <CardPicture src={player.picture}/>
@@ -19,5 +20,6 @@ export const Player = () => {
               </Card>  
         ))}
         </div>
+        </>
     )
 }
