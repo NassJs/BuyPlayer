@@ -18,9 +18,8 @@ export const Player = () => {
                 <CardFooter>
                 <CardTitle> {player.name}</CardTitle>
                 <CardPrice> {player.price} Dollars</CardPrice>
-                <PlayerActiveBuy player={player.price}>
-                  Buy  {player.name}
-                  </PlayerActiveBuy>
+                <PlayerActiveBuy text={ "Buy " +player.name} player={player.price}> 
+                </PlayerActiveBuy>
                 </CardFooter>
               </Card>  
         ))}

@@ -1,10 +1,10 @@
 import React from "react";
-
-export const Button = ({children, onClick}) => {
+import './Button.css';
+export const Button = ({children, onClick, variant}) => {
     return (
         <button 
-            className="w-24 h-10 shadow-2xl bg-violet-500 hover:bg-violet-600 active:bg-violet-700
-            rounded-full focus:outline-none focus:ring focus:ring-violet-300 cursor-pointer"
+            className={`w-24 h-10 shadow-2xl bg-violet-500 hover:bg-violet-600 active:bg-violet-700
+            rounded-full focus:outline-none focus:ring focus:ring-violet-300 cursor-pointer ${variant}`}
              onClick={onClick}>
             {children}
         </button>
