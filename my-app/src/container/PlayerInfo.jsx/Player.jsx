@@ -8,7 +8,7 @@ export const Player = () => {
         <>
         <ButtonMoney />
         <div className="flex flex-row justify-center flex-wrap pt-20">
-            {Data.map((player) => (
+            {Data.map((player ) => (
               <Card> 
                 <CardHeader>
                 <CardPicture src={player.picture}/>
