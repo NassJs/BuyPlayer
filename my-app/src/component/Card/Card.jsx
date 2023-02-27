@@ -10,7 +10,7 @@ export const Card= ({children}) => {
 }
 export const CardTitle = ({children}) => {
     return (
-        <div className="text-violet-700 text-xl ">{children}</div>
+        <div className="text-violet-700 text-xl underline decoration-sky-600/30 ">{children}</div>
     )
 }
 export const CardHeader = ({children}) => {

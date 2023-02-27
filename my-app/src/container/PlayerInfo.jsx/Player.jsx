@@ -10,15 +10,15 @@ export const Player = () => {
         <>
         <ButtonMoney />
         <div className="flex flex-column justify-center flex-wrap pt-20">
-            {Data.map((player ) => (
+            {Data.map((player, key) => (
               <Card> 
-                <CardHeader>
+                <CardHeader key={key.id}>
                 <CardPicture src={player.picture}/>
                 </CardHeader>
                 <CardFooter>
                 <CardTitle> {player.name}</CardTitle>
                 <CardPrice> {player.price} Dollars</CardPrice>
-                <PlayerActiveBuy text={ "Buy " +player.name} player={player.price}> 
+                <PlayerActiveBuy text="Buy" player={player.price}> 
                 </PlayerActiveBuy>
                 </CardFooter>
               </Card>  

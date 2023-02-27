@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './Toast.css';
 import { useEffect } from "react";
 import { GrValidate } from 'react-icons/gr';
 import { useContext } from "react";
@@ -14,7 +15,7 @@ export const ToastProvider = ({children}) => {
         if (active){
             setTimeout(() => {
                 setActive(false)
-            },3000)
+            },1000)
         }
     },[active])
 
@@ -38,9 +39,9 @@ export const useToast  = () => {
     return res;
 }
 
-export const Toast = ({children, text}) => {
+export const Toast = ({children, text, toastVariant}) => {
    return(
-    <div className=" flex justify-center items-center h-20 w-60 bg-lime-300">
+    <div className={`flex justify-center mx-auto items-center h-20 w-60 bg-lime-300  ${toastVariant}`}>
         <GrValidate /> 
        <span className="flex pr-4 pl-4"> {text} </span>
        {children}
