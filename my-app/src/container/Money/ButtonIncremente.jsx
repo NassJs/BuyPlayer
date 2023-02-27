@@ -9,7 +9,6 @@ export const ButtonIncremente = ({value , unlock, }) => {
     const {money , updateMyMoney} = useMoney();
     const setActive = useToast();
     const resUseToast = useToast();
-
     const handleIncremente = () => {
         updateMyMoney(money + value)
     }

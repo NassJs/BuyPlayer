@@ -1,13 +1,15 @@
 import React from "react";
-import { Data } from "../../data/Data";
+import  { Data }  from "../../data/Data";
 import {Card, CardFooter, CardHeader, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
 import { ButtonMoney } from "../Money/ButtonMoney";
+import { PlayerActiveBuy } from "./PlayerActiveBuy";
+
 export const Player = () => {
-    
+
     return (
         <>
         <ButtonMoney />
-        <div className="flex flex-row justify-center flex-wrap pt-20">
+        <div className="flex flex-column justify-center flex-wrap pt-20">
             {Data.map((player ) => (
               <Card> 
                 <CardHeader>
@@ -16,6 +18,9 @@ export const Player = () => {
                 <CardFooter>
                 <CardTitle> {player.name}</CardTitle>
                 <CardPrice> {player.price} Dollars</CardPrice>
+                <PlayerActiveBuy player={player.price}>
+                  Buy  {player.name}
+                  </PlayerActiveBuy>
                 </CardFooter>
               </Card>  
         ))}

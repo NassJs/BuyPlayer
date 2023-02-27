@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useEffect } from "react";
+import { GrValidate } from 'react-icons/gr';
 import { useContext } from "react";
 import { createContext } from "react";
  
@@ -8,12 +9,12 @@ export const ToastContext = createContext();
 export const ToastProvider = ({children}) => {
 
     const [active, setActive] = useState(false);
-    const [text , setText]= useState("test");
+    const [text , setText]= useState("");
     useEffect(() => {
         if (active){
             setTimeout(() => {
                 setActive(false)
-            }, 1000)
+            },3000)
         }
     },[active])
 
@@ -37,10 +38,12 @@ export const useToast  = () => {
     return res;
 }
 
-export const Toast = ({text}) => {
+export const Toast = ({children, text}) => {
    return(
-    <div className=" flex justify-center w-40 bg-lime-500">
-       <span className="flex ">{text}</span>
+    <div className=" flex justify-center items-center h-20 w-60 bg-lime-300">
+        <GrValidate /> 
+       <span className="flex pr-4 pl-4"> {text} </span>
+       {children}
     </div>
    )
 }
