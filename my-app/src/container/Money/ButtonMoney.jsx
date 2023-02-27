@@ -1,14 +1,13 @@
 import React from "react";
-import {Button} from '../../component/Button/Button'
-import {useMoney} from '../../context/MoneyContext'
+import { ButtonIncremente } from "./ButtonIncremente";
+
 
 export const ButtonMoney = () => {
-    const {money , updateMyMoney} = useMoney()
-    
-    const handleIncremente = (value) => {
-        updateMyMoney(money + value)
-    }
     return (
-        <Button onClick={() => handleIncremente(1)}> Monnaie {money} </Button>
+    <div className="flex"> 
+        <ButtonIncremente value={1} unlock={0} />
+        <ButtonIncremente value={3} unlock={10} />
+        <ButtonIncremente value={5} unlock={20} />
+    </div>
     )
 }

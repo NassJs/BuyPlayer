@@ -1,6 +1,5 @@
 import React, {createContext, useMemo, useState , useContext} from "react";
 
-
 export const MoneyContext = createContext();
 
 export const MoneyProvider = ({children}) => {
@@ -20,7 +19,6 @@ export const MoneyProvider = ({children}) => {
 export const useMoney = () => {
 
     const { money , setMoney } = useContext(MoneyContext);
-    console.log(money);
     const updateMyMoney = (value) => {
         setMoney(value)
     }
