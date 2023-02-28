@@ -3,8 +3,19 @@ import  { Data }  from "../../data/Data";
 import {Card, CardFooter, CardHeader, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
 import { ButtonMoney } from "../Money/ButtonMoney";
 import { PlayerActiveBuy } from "./PlayerActiveBuy";
+import { useMoney } from "../../context/MoneyContext";
 
 export const Player = () => {
+
+  const {money, updateMyMoney} = useMoney();
+
+    const handleBuyPlayer = (playerPrice) => {
+      if ( money >= playerPrice){
+        updateMyMoney(money - playerPrice)
+      
+    }
+  }
+    console.log(money)
 
     return (
         <>
@@ -18,8 +29,7 @@ export const Player = () => {
                 <CardFooter>
                 <CardTitle> {player.name}</CardTitle>
                 <CardPrice> {player.price} Dollars</CardPrice>
-                <PlayerActiveBuy text="Buy" player={player.price}> 
-                </PlayerActiveBuy>
+                <PlayerActiveBuy onClick={()=> {handleBuyPlayer(player.price)}} text="Buy" player={player.price} /> 
                 </CardFooter>
               </Card>  
         ))}

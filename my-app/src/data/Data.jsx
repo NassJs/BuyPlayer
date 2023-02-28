@@ -18,7 +18,7 @@ export const Data = [
         name : "MBappé",
         age : 25,
         picture : "https://www.lejdd.fr/lmnr/var/jdd/public/media/image/2022/09/17/19/kylian-mbappe-patron-du-psg-et-du-football-francais.jpg?VersionId=dPB5Emc0p9DCCUDRP9lRXLzZuprPLRH2",
-        price : 5
+        price : 7
     },
     {
         id: 4,
