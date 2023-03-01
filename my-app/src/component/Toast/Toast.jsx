@@ -40,8 +40,8 @@ export const useToast  = () => {
 
 export const Toast = ({children, text, toastVariant}) => {
    return(
-    <div className={`flex justify-center mx-auto items-center h-20 w-60 bg-lime-300  ${toastVariant}`}>
-       <span className="flex pr-4 pl-4"> {text} </span>
+    <div className={`flex justify-center mx-auto items-center h-20  bg-lime-300  ${toastVariant}`}>
+       <span className="flex justify-center items-center pr-4 pl-4"> {text} </span>
        {children}
     </div>
    )

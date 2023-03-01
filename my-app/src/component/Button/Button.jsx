@@ -1,6 +1,6 @@
 import React from "react";
 import './Button.css';
-export const Button = ({children, onClick, variant}) => {
+export const Button = ({children, onClick, variant, disabled}) => {
     return (
         <button 
             className={`w-24 h-10 shadow-2xl bg-violet-500 hover:bg-violet-600 active:bg-violet-700
