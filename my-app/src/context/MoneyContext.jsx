@@ -17,7 +17,6 @@ export const MoneyProvider = ({children}) => {
 }
 
 export const useMoney = () => {
-
     const { money , setMoney } = useContext(MoneyContext);
     const updateMyMoney = (value) => {
         setMoney(value)

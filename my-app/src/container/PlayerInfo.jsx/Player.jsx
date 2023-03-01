@@ -1,30 +1,34 @@
 import React, {useState} from "react";
-import  { Data }  from "../../data/Data";
 import {Card, CardFooter, CardHeader, CardInformation, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
 import { ButtonMoney } from "../Money/ButtonMoney";
 import { PlayerActiveBuy } from "./PlayerActiveBuy";
 import { useMoney } from "../../context/MoneyContext";
+import { Score } from "../../component/Score/Score";
+import { PlayerValidateBuy } from "./PlayerValidateBuy";
+import { usePlayer } from "../../context/PlayerContext";
+
 
 export const Player = () => {
+
   const {money, updateMyMoney} = useMoney();
-  const [unlockPlayer , setUnlockPlayer ] = useState(null);
- 
-    const handleBuyPlayer = (playerPrice) => {
-      if ( money >= playerPrice) {
-        updateMyMoney(money - playerPrice);
-        setUnlockPlayer("joueur acheter")
-        console.log(unlockPlayer)
-    } 
+  const [validateBuy, setValidateBuy] = useState("");
+  const playerDatas = usePlayer();
+
+    const handleBuyPlayer = (player) => {
+      console.log("mes player", player.price);
+        if ( money >= player.price) {
+          updateMyMoney(money - player.price);
+          setValidateBuy("unlock")
+        }          
   }
-    console.log(money)
 
     return (
         <>
         <ButtonMoney />
+        <Score> Monnaie : {money} </Score>
         <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">
-            {Data.map((player, key) => (
+            {playerDatas.player.map((player, key) => (
               <Card> 
-                {/* <span>{player.id}</span> */}
                 <CardHeader key={key.id}>
                 <CardPicture src={player.picture}/>
                 </CardHeader>
@@ -32,8 +36,9 @@ export const Player = () => {
                 <CardInformation> #{player.id}</CardInformation>
                 <CardTitle> {player.name} </CardTitle>
                 <CardPrice> {player.price} Dollard </CardPrice>
-                <PlayerActiveBuy onClick={()=> {handleBuyPlayer(player.price)}} text={unlockPlayer}
-                player={player.price} buy="achat"/> 
+                <PlayerActiveBuy onClick={()=> {handleBuyPlayer(player)}}
+                 player={player.price} buy="achat" /> 
+                <PlayerValidateBuy unlock={validateBuy}/>
                 </CardFooter>
               </Card>  
         ))}

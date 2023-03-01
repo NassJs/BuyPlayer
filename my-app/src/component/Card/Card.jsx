@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Card= ({children}) => {
     return (
-    <div  className="flex flex-col flex-wrap justify-center px-8 
-    w-96 shadow-2xl items-stretch border-4 border-violet-50 relative"> 
+    <div  className="flex flex-col flex-wrap justify-center h-70 px-8 
+    w-80 shadow-2xl items-stretch border-4 border-violet-50 relative"> 
     {children}
     </div>
     )
