@@ -26,7 +26,7 @@ export const CardFooter = ({children}) => {
 }
 export const CardInformation = ({children}) => {
     return (
-        <span className="bg-orange-200 rounded-lg"> {children}</span>
+        <span className="bg-orange-200 rounded-lg"> {children} </span>
     )
 }
 export const CardPicture = ({alt , src}) => {

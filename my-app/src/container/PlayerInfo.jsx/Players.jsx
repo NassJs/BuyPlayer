@@ -1,33 +1,23 @@
-import React, {useState} from "react";
+import React from "react";
 import {Card, CardFooter, CardHeader, CardInformation, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
 import { ButtonMoney } from "../Money/ButtonMoney";
 import { PlayerActiveBuy } from "./PlayerActiveBuy";
 import { useMoney } from "../../context/MoneyContext";
 import { Score } from "../../component/Score/Score";
 import { PlayerValidateBuy } from "./PlayerValidateBuy";
-import { usePlayer } from "../../context/PlayerContext";
+import { usePlayers } from "../../context/PlayerContext";
 
 
-export const Player = () => {
+export const Players = () => {
 
-  const {money, updateMyMoney} = useMoney();
-  const [validateBuy, setValidateBuy] = useState("");
-  const playerDatas = usePlayer();
-
-    const handleBuyPlayer = (player) => {
-      console.log("mes player", player.price);
-        if ( money >= player.price) {
-          updateMyMoney(money - player.price);
-          setValidateBuy("unlock")
-        }          
-  }
-
+  const {money} = useMoney();
+  const {players} = usePlayers();
     return (
         <>
         <ButtonMoney />
         <Score> Monnaie : {money} </Score>
         <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">
-            {playerDatas.player.map((player, key) => (
+            {players.map((player, key) => (
               <Card> 
                 <CardHeader key={key.id}>
                 <CardPicture src={player.picture}/>
@@ -36,9 +26,8 @@ export const Player = () => {
                 <CardInformation> #{player.id}</CardInformation>
                 <CardTitle> {player.name} </CardTitle>
                 <CardPrice> {player.price} Dollard </CardPrice>
-                <PlayerActiveBuy onClick={()=> {handleBuyPlayer(player)}}
-                 player={player.price} buy="achat" /> 
-                <PlayerValidateBuy unlock={validateBuy}/>
+                <PlayerActiveBuy player={player} buy="achat" /> 
+                <PlayerValidateBuy unlock={player.player}/>
                 </CardFooter>
               </Card>  
         ))}

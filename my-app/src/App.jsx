@@ -1,21 +1,22 @@
 import './App.css';
-import { Player } from './container/PlayerInfo.jsx/Player';
+import { Players } from './container/PlayerInfo.jsx/Players';
 import { MoneyProvider } from './context/MoneyContext';
 import { ToastProvider } from './component/Toast/Toast'
 import { PlayerProvider } from './context/PlayerContext';
 function App() {
 
-
   return (
+
     <div className="App">
       <MoneyProvider>
         <PlayerProvider>
         <ToastProvider>
-        <Player />
+        <Players />
         </ToastProvider>
         </PlayerProvider>
       </MoneyProvider>
     </div>
+    
   );
 }
 
