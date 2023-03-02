@@ -12,6 +12,7 @@ export const Players = () => {
 
   const {money} = useMoney();
   const {players} = usePlayers();
+  console.log("csl players", players)
     return (
         <>
         <ButtonMoney />
