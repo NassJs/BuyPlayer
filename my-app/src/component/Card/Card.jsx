@@ -10,7 +10,7 @@ export const Card= ({children}) => {
 }
 export const CardTitle = ({children}) => {
     return (
-        <div className="flex justify-center text-violet-700 text-xl underline decoration-sky-600/30 ">{children}</div>
+        <div className="flex justify-center p-1text-violet-700 text-xl underline decoration-sky-600/30 ">{children}</div>
     )
 }
 
@@ -26,12 +26,12 @@ export const CardFooter = ({children}) => {
 }
 export const CardInformation = ({children}) => {
     return (
-        <span className="flex justify-center bg-orange-200 rounded-lg"> {children} </span>
+        <span className="flex justify-center  items-center"> {children} </span>
     )
 }
 export const CardPicture = ({alt , src}) => {
     return (
-        <img className="h-40 w-80 object-scale-down"src={src} alt={alt} />
+        <img className="h-40 w-60 object-scale-down"src={src} alt={alt} />
     )
 }
 export const CardPrice = ({children}) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardFooter, CardHeader, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
+import {Card, CardFooter, CardHeader, CardInformation, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
 import { ButtonMoney } from "../Money/ButtonMoney";
 import { PlayerActiveBuy } from "./PlayerActiveBuy";
 import { useMoney } from "../../context/MoneyContext";
@@ -28,6 +28,7 @@ export const Players = () => {
                 <CardFooter>
                 <CardTitle> {player.name} </CardTitle>
                 <CardPrice> {player.price} Dollard </CardPrice>
+                <CardInformation> {player.poste}</CardInformation>
                 <PlayerActiveBuy player={player} buy="Achat" /> 
                 <PlayerValidateBuy unlock={player.player}/>
                 </CardFooter>

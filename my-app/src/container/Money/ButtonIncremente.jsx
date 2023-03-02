@@ -23,7 +23,7 @@ export const ButtonIncremente = ({value , unlock, }) => {
 
     if( unlock <= money)
     return (
-        <div className="flex justify-center pt-4 ">
+        <div className="flex  pt-4 ">
          <Button  onClick={() => handleIncremente(value)}> Monnaie x  {value} </Button>
         </div>
     )
