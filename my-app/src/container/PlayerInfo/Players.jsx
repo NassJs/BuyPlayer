@@ -6,17 +6,19 @@ import { useMoney } from "../../context/MoneyContext";
 import { Score } from "../../component/Score/Score";
 import { PlayerValidateBuy } from "./PlayerValidateBuy";
 import { usePlayers } from "../../context/PlayerContext";
+import { Coachs } from "../Coach/Coachs";
 
 
 export const Players = () => {
 
   const {money} = useMoney();
   const {players} = usePlayers();
-  console.log("csl players", players)
+
     return (
         <>
         <ButtonMoney />
         <Score> Monnaie : {money} </Score>
+        <Coachs unlockCoach="3"/> 
         <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">
             {players.map((player, key) => (
               <Card> 
@@ -24,15 +26,15 @@ export const Players = () => {
                 <CardPicture src={player.picture}/>
                 </CardHeader>
                 <CardFooter>
-                <CardInformation> #{player.id}</CardInformation>
                 <CardTitle> {player.name} </CardTitle>
                 <CardPrice> {player.price} Dollard </CardPrice>
-                <PlayerActiveBuy player={player} buy="achat" /> 
+                <PlayerActiveBuy player={player} buy="Achat" /> 
                 <PlayerValidateBuy unlock={player.player}/>
                 </CardFooter>
               </Card>  
         ))}
         </div>
+        
         </>
     )
 }
