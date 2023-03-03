@@ -1,0 +1,33 @@
+.home {
+   height: 100%;
+   width: 100%;
+}
+.home_center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20%;
+}
+.home_position_btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+.home_composition {
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(210, 199, 157), rgb(123, 134, 180));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.home_compostion_center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+}
+.home_choice{
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(210, 199, 157), rgb(123, 134, 180));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

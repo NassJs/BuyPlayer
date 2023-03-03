@@ -1,5 +1,5 @@
 import React from "react";
-import { Players } from "../container/PlayerInfo/Players";
+import { Players } from "../../container/PlayerInfo/Players";
 
 export const Player = () => {
     return (

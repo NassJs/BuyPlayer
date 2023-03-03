@@ -4,7 +4,7 @@ const CountContext = createContext()
 
 export const CountProvider = ({children}) => {
     const [count, setCount] = useState(0);
-    console.log(count);
+    
     
     const value = useMemo(() => ({
         count, setCount
@@ -19,7 +19,7 @@ export const CountProvider = ({children}) => {
 
 export const useCount = () => {
     const {count , setCount} = useContext(CountContext);
-    console.log(count);
+    
     const IncrementeCount = (value) => {
         setCount(count + value)
     }

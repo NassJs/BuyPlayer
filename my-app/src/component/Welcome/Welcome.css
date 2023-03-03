@@ -1,0 +1,9 @@
+.welcome {
+    font-weight: bold;
+    font-size: 3.5em;
+}
+.welcome.variantText {
+    background: -webkit-linear-gradient(rgb(73, 83, 169), rgb(111, 121, 162));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

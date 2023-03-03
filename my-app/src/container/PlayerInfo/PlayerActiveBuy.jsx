@@ -8,7 +8,7 @@ export const PlayerActiveBuy = ({buy, player}) => {
     const {money, updateMyMoney} = useMoney();
     const {unlockPlayer} = usePlayers();
     const {count, IncrementeCount} = useCount();
-    console.log(count);
+    
     const handleBuyPlayer = () => {
         if ( money >= player.price) {
             updateMyMoney(money - player.price);
