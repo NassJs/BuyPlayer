@@ -1,10 +1,10 @@
-import React from "react"
-
-
-
+import React from "react";
+import { Players } from "../container/PlayerInfo/Players";
 
 export const Player = () => {
     return (
-        <div></div>
+        <div>
+           <Players />
+        </div>
     )
 }
