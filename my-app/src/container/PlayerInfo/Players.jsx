@@ -1,6 +1,5 @@
 import React from "react";
 import {Card, CardFooter, CardHeader, CardInformation, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
-import { ButtonMoney } from "../Money/ButtonMoney";
 import { PlayerActiveBuy } from "./PlayerActiveBuy";
 import { useMoney } from "../../context/MoneyContext";
 import { Score } from "../../component/Score/Score";
@@ -16,7 +15,7 @@ export const Players = () => {
 
     return (
         <>
-        <ButtonMoney />
+  
         <Score> Monnaie : {money} </Score>
         <Coachs unlockCoach="3"/> 
         <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">

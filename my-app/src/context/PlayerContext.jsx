@@ -5,6 +5,7 @@ import { Data } from "../data/Data";
 export const PlayerContext = createContext();
 export const PlayerProvider = ({children}) => {
     const [players, setPlayers] = useState(Data);
+
     
     const value = useMemo(() => ({
         players , setPlayers

@@ -6,7 +6,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 20%;
 }
 .home_position_btn {
     display: flex;
@@ -19,6 +18,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .home_compostion_center{
     display: flex;
     align-items: center;
