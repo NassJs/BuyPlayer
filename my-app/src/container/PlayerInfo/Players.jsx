@@ -1,12 +1,13 @@
 import React from "react";
+import './Players.css';
 import {Card, CardFooter, CardHeader, CardInformation, CardPicture, CardPrice,CardTitle} from '../../component/Card/Card';
 import { PlayerActiveBuy } from "./PlayerActiveBuy";
 import { useMoney } from "../../context/MoneyContext";
 import { Score } from "../../component/Score/Score";
 import { PlayerValidateBuy } from "./PlayerValidateBuy";
 import { usePlayers } from "../../context/PlayerContext";
-import { Coachs } from "../Coach/Coachs";
-
+// import { Coachs } from "../Coach/Coachs";
+import { ActiveModal } from "../Modal/ActiveModal";
 
 export const Players = () => {
 
@@ -17,7 +18,12 @@ export const Players = () => {
         <>
   
         <Score> Monnaie : {money} </Score>
-        <Coachs unlockCoach="3"/> 
+        {/* <Coachs unlockCoach="3"/>  */}
+
+        <div className="position_modal">
+          <ActiveModal />
+        </div>
+
         <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">
             {players.map((player, key) => (
               <Card> 
@@ -34,6 +40,7 @@ export const Players = () => {
               </Card>  
         ))}
         </div>
+    
         
         </>
     )
