@@ -1,7 +1,7 @@
-import React from 'react'
-import { Button } from '../../component/Button/Button'
+import React from 'react';
+import { ButtonDesign } from '../../component/Button/ButtonDesign';
 
-export const FilterByCategory = ({ setFilterCategory, allPlayers, setPlayers }) => {
+export const FilterByCategory = ({ setFilterCategory, allPlayers }) => {
 
     const handleFiltre = (poste) => {
         if (poste === "All") {
@@ -14,19 +14,19 @@ export const FilterByCategory = ({ setFilterCategory, allPlayers, setPlayers }) 
     }
 
     return (
-        <div>
-            <Button onClick={() => handleFiltre("All")}>
-                ALL
-            </Button>
-            <Button onClick={() => handleFiltre("Attaquant")}>
+        <div className="filter_byCategory">
+            <ButtonDesign design="design" onClick={() => handleFiltre("All")}>
+                All
+            </ButtonDesign>
+            <ButtonDesign design="design" onClick={() => handleFiltre("Attaquant")}>
                 Attaquant
-            </Button>
-            <Button onClick={() => handleFiltre("Milieu")}>
+            </ButtonDesign>
+            <ButtonDesign design="design" onClick={() => handleFiltre("Milieu")}>
                 Milieu
-            </Button>
-            <Button onClick={() => handleFiltre("Défenseur")}>
+            </ButtonDesign>
+            <ButtonDesign design="design" onClick={() => handleFiltre("Défenseur")}>
                 Défenseur
-            </Button>
+            </ButtonDesign>
         </div>
     )
 }

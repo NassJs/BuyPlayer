@@ -29,7 +29,6 @@ export const Players = () => {
       <FilterByCategory
         allPlayers={allPlayers}
         setFilterCategory={setFilterCategory}
-        setPlayers={setPlayers}
       />
 
       <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">
