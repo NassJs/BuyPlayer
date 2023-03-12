@@ -11,7 +11,6 @@ import { Score } from "../../component/Score/Score";
 import { PlayerValidateBuy } from "./PlayerValidateBuy";
 import { usePlayers } from "../../context/PlayerContext";
 import { ActiveModal } from "../Modal/ActiveModal";
-import { Button } from '../../component/Button/Button'
 import { FilterByCategory } from "../Filter/FilterByCategory";
 
 export const Players = () => {
@@ -19,9 +18,7 @@ export const Players = () => {
   const { money } = useMoney();
   const { players } = usePlayers();
   const [allPlayers, setPlayers] = useState(players)
-  const [filterCategory, setFilterCategory] = useState()
-
-
+  const [filterCategory, setFilterCategory] = useState(players)
   return (
     <>
       <Score> Monnaie : {money} </Score>
@@ -30,13 +27,13 @@ export const Players = () => {
       </div>
 
       <FilterByCategory
-        setPlayers={setPlayers}
         allPlayers={allPlayers}
         setFilterCategory={setFilterCategory}
+        setPlayers={setPlayers}
       />
 
       <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">
-        {allPlayers.map((player, key) => (
+        {filterCategory.map((player, key) => (
           <Card>
             <CardHeader key={key.id}>
               <CardPicture src={player.picture} />

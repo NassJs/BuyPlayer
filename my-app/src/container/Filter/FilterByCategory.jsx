@@ -1,14 +1,14 @@
 import React from 'react'
 import { Button } from '../../component/Button/Button'
 
-export const FilterByCategory = ({ allPlayers, setPlayers, setFilterCategory }) => {
-    console.log("allPlayers", allPlayers);
+export const FilterByCategory = ({ setFilterCategory, allPlayers, setPlayers }) => {
+
     const handleFiltre = (poste) => {
         if (poste === "All") {
             setFilterCategory(allPlayers)
         } else {
             const filtered = allPlayers.filter((fil) => fil.poste === poste)
-            setPlayers(filtered)
+            setFilterCategory(filtered)
         }
 
     }
