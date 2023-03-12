@@ -1,0 +1,10 @@
+.filter_byCategory {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.filter_choice {
+    padding-left: 10px;
+    padding-left: 10px;
+}
