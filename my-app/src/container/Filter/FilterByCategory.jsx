@@ -1,4 +1,5 @@
 import React from 'react';
+import './FilterByCategory.css';
 import { ButtonDesign } from '../../component/Button/ButtonDesign';
 
 export const FilterByCategory = ({ setFilterCategory, allPlayers }) => {
@@ -15,16 +16,16 @@ export const FilterByCategory = ({ setFilterCategory, allPlayers }) => {
 
     return (
         <div className="filter_byCategory">
-            <ButtonDesign design="design" onClick={() => handleFiltre("All")}>
+            <ButtonDesign design="design" size="s" onClick={() => handleFiltre("All")}>
                 All
             </ButtonDesign>
-            <ButtonDesign design="design" onClick={() => handleFiltre("Attaquant")}>
+            <ButtonDesign design="design" size="s" onClick={() => handleFiltre("Attaquant")}>
                 Attaquant
             </ButtonDesign>
-            <ButtonDesign design="design" onClick={() => handleFiltre("Milieu")}>
+            <ButtonDesign design="design" size="s" onClick={() => handleFiltre("Milieu")}>
                 Milieu
             </ButtonDesign>
-            <ButtonDesign design="design" onClick={() => handleFiltre("Défenseur")}>
+            <ButtonDesign design="design" size="s" onClick={() => handleFiltre("Défenseur")}>
                 Défenseur
             </ButtonDesign>
         </div>
