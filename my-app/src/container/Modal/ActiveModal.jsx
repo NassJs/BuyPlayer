@@ -12,9 +12,7 @@ export const ActiveModal = () => {
     const sizeTeam = 11;
     const {count} = useCount();
     const {choicePlayer} = useChoicePlayer();
-    const [note , setNote] = useState(0);
-
-    console.log("note",note)     
+    const [note , setNote] = useState(0);   
 
     useEffect(() => {
         setNote(0);
