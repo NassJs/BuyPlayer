@@ -11,18 +11,21 @@ function App() {
   return (
 
     <div className="App">
+      <div className='position_theme'>
+    </div>
+    
       <MoneyProvider>
-        <ChoicePlayerProvider>
-          <CountProvider>
-            <PlayerProvider>
-              <ToastProvider>
-               <Router/>
-              </ToastProvider>
-            </PlayerProvider>
-          </CountProvider>
-        </ChoicePlayerProvider>
+          <ChoicePlayerProvider>
+            <CountProvider>
+              <PlayerProvider>
+                <ToastProvider>
+                  <Router/>
+                </ToastProvider>
+              </PlayerProvider>
+            </CountProvider>
+          </ChoicePlayerProvider>
       </MoneyProvider>
-   
+      
     </div>
     
   );

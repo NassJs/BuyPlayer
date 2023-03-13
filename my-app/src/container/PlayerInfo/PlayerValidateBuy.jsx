@@ -5,6 +5,6 @@ export const PlayerValidateBuy = ({unlock}) => {
 
    if (unlock === "unlock")
     return (
-        <div className="flex justify-center align-center"> Joueur acheté <AiFillCheckCircle /></div>
+        <div className="flex justify-center items-center text-lg"> Joueur acheté <AiFillCheckCircle /></div>
     )
 }

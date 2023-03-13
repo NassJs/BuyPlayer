@@ -4,7 +4,7 @@ const ChoicePlayerContext = createContext();
 
 export const ChoicePlayerProvider = ({children}) => {
     const [choicePlayer, setChoicePlayer] = useState([]);
-
+    console.log(choicePlayer)
     const value = useMemo(() => ({
         choicePlayer, setChoicePlayer
     }), [choicePlayer])

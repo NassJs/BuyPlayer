@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Card= ({children}) => {
     return (
-    <div  className="flex justify-center flex-col  flex-wrap  h-70 px-8 
-    w-80 shadow-2xl items-stretch border-4 border-violet-50 relative"> 
+    <div  className="flex justify-center flex-col  flex-wrap  h-70  
+    w-60 shadow-2xl items-stretch border-4 border-violet-50 rounded-lg relative"> 
     {children}
     </div>
     )
@@ -16,7 +16,7 @@ export const CardTitle = ({children}) => {
 
 export const CardHeader = ({children}) => {
     return (
-        <div className="flex justify-center pt-6 ">{children}</div>
+        <div className="flex justify-center ">{children}</div>
     )
 }
 export const CardFooter = ({children}) => {
@@ -31,7 +31,7 @@ export const CardInformation = ({children}) => {
 }
 export const CardPicture = ({alt , src}) => {
     return (
-        <img className="h-40 w-60 object-scale-down"src={src} alt={alt} />
+        <img className="h-40 w-60 "src={src} alt={alt} />
     )
 }
 export const CardPrice = ({children}) => {
