@@ -19,6 +19,7 @@ export const Players = () => {
   const { players } = usePlayers();
   const [allPlayers, setPlayers] = useState(players);
   const [filterCategory, setFilterCategory] = useState(players);
+ 
   return (
     <>
       <Score> Monnaie : {money} </Score>
@@ -31,8 +32,9 @@ export const Players = () => {
         setFilterCategory={setFilterCategory}
       />
       <div className="flex flex-column justify-center flex-wrap gap-4 pt-20">
-        {filterCategory.map((player, key) => (
-          <Card>
+        {filterCategory.map((player, key) => ( 
+           money >= player.price && (
+            <Card>
             <CardHeader key={key.id}>
               <CardPicture src={player.picture} />
             </CardHeader>
@@ -44,9 +46,12 @@ export const Players = () => {
               <PlayerValidateBuy unlock={player.player} />
             </CardFooter>
           </Card>
+           )
+          
+        
         ))}
       </div>
-
+        
 
     </>
   )
